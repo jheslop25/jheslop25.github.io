@@ -1,59 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <title>Okotoks Pizza</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Welcome to Okotoks Pizza - awesome pizza from a family run joint">
     <meta name="keywords" content="pizza, delivery, okotoks\,ab, okotoks pizza">
     <meta name="author" content="doug the dude who owns this place">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Okotoks Pizza</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
-    <!--- this is the top of my header-->
-    <header>
-        <div class="row" id="nav_bar">
-            <span id="logo-background">
-                <a href="index.html"><img src="images/okotoks-pizza-logo.png" width=150px></a>
-            </span>
-        </div>
-        <div id="nav_menu">
-            <a class="nav_link" href="pages/about.html">About Us</a>
-            <a class="nav_link" href="pages/menu.html">Menu</a>
-        </div>
-        <div id="email-phone">
-            <a class="nav_link" href="tel:4035555555">403-555-5555</a>
-            <a class="nav_link" href="mailto:info@okotokspizza.ca">Email Us</a>
-        </div>
-    </header>
-    <!--- this is the bottom of the header-->
-    <section id="content">
-        <!--- this is the begining of the page content-->
-        <div id="media">
-            <h1 id="headline">Welcome To Okotoks Pizza!</h1>
-            <div id="cta-button">
-                <a id="cta" href="about.html">See Menu</a>
-            </div>
-            <div id="yelp">
-                <a href="https://www.yelp.ca/biz/pizzaberg-cafe-okotoks?osq=Pizza+Delivery">Yelp Reviews!</a>
-            </div>
-            <div id="video-content">
-                <iframe src="https://www.youtube.com/embed/xbHbcmQIcAQ" frameborder="0"
-                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-                </iframe>
+    <div id="parent">
+        <!-- header and menu html -->
+        <div id="header">
+            <div id="logo-container"><a href="index.html"><img id="logo" src="images/okotoks-pizza-logo.png"
+                        alt="okotoks pizza logo"></a></div>
+            <div id="nav-menu">
+                <div class="nav-link" id="phone"><a id="mobile-href" href="tel:4035555555">403-555-5555</a>
+                    <p id="desktop-phone">403-555-5555</p>
+                    </p>
+                </div>
+                <div class="nav-link" id="menu"><a href="pages/menu.html">Menu</a></div>
+                <div class="nav-link" id="location"><a href="pages/location.html">Find Us</a></div>
+                <div class="nav-link" id="about-us"><a href="pages/about.html">About Us</a></div>
             </div>
         </div>
-    </section>
-    <!--- end of page content-->
-    <footer>
-        <!--- beginning of footer-->
+
+        <!-- content container html -->
+        <div id="background">
+            <div id="page-content">
+                <div id="headline-container">
+                    <p id="headline">Welcome To Okotoks Pizza!</p>
+                </div>
+                <div id="call-to-action-container">
+                    <a id="cta-link" href="pages/menu.html">See Menu!</a>
+                </div>
+                <div id="image-container">
+                    <div id="home-image-container">
+                        <img id="home-image" src="images/oniongarlic.png" alt="artisan pizza">
+                    </div>
+                    <div id="home-image-container">
+                        <img id="home-image-two" src="images/mushroom.png" alt="artisan pizza">
+                    </div>
+
+                </div>
+
+                <div id="some-text">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit quae officia incidunt quo fuga
+                        praesentium? Eius alias veniam quisquam consequuntur ex itaque ullam eum fuga! Mollitia dolore
+                        eius
+                        consequuntur nesciunt.</p>
+                    <div id="home-image-two-container">
+                        <img id="home-image-three" src="images/one-onion.png" alt="artisan pizza">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- footer html -->
         <div id="footer">
-            some shit
+            <div id="copy-write">
+                <p>&copy; Okotoks Pizza - 2019</p>
+            </div>
+            <div id="empty-footer-col"></div>
         </div>
-    </footer>
-    <!--- end of footer-->
+    </div>
 </body>
 
 </html>
