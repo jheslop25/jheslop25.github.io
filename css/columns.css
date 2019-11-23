@@ -1,0 +1,109 @@
+* {
+    margin: 0px;
+}
+
+#column-one {
+    position: absolute;
+    width: 30%;
+    height: 80vh;
+    top: 15%;
+    left: 4%;
+    background-color: #8D0801;
+}
+
+#column-two {
+    position: absolute;
+    width: 30%;
+    height: 80vh;
+    top: 15%;
+    left: 35%;
+    background-color: #8D0801;
+}
+
+#column-three {
+    position: absolute;
+    width: 30%;
+    height: 80vh;
+    top: 15%;
+    left: 66%;
+    background-color: #8D0801;
+}
+#column-four {
+    position: absolute;
+    width: 30%;
+    height: 80vh;
+    top: 100%;
+    left: 4%;
+    background-color: #8D0801;
+}
+
+#column-five {
+    position: absolute;
+    width: 30%;
+    height: 80vh;
+    top: 100%;
+    left: 35%;
+    background-color: #8D0801;
+}
+
+#column-six {
+    position: absolute;
+    width: 30%;
+    height: 80vh;
+    top: 100%;
+    left: 66%;
+    background-color: #8D0801;
+}
+
+#logo {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100px;
+}
+
+header {
+    height: 35px;
+    width: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: #C32F27;
+    z-index: 500;
+}
+
+section {
+    height: 100vh;
+    width: 100vw;
+    background-color: #DB7C26;
+}
+
+footer {
+    height: 35px;
+    width: 100%;
+    position: sitcky;
+    bottom: 0px;
+    left: 0px;
+    background-color: #C32F27;
+}
+@media screen and (max-width: 600px) {
+    #column-one, #column-two, #column-three, #column-four, #column-five, #column-six {
+        height: 40vh;
+        width: 80%;
+        display: block;
+        position: static;
+        margin-top: 35px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    #row-one {
+        padding-top: 80px;
+        padding-bottom: 45px;
+        height: 130vh;
+    }
+    #row-two {
+        padding-top: 2px;
+        padding-bottom: 45px;
+        height: 130vh;
+    }
+}

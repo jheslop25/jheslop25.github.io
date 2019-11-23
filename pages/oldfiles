@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>w3d assignment</title>
+    <link rel="stylesheet" type="text/css" href="../css/w3d.css">
+</head>
+
+<body>
+    <!--this is the start of the header-->
+    <div id="container">
+        <div id="header-row">
+            <div id="col-1-row-1"></div>
+            <div class="nav-link" id="col-2-row-1"><a href="../index.html">home</a></div>
+        </div>
+        <div id="content-section">
+            <div id="col-1">
+                <img src="../images/okotoks-pizza-logo.png">
+            </div>
+            <div id="col-2">
+                <h1>welcome to okotoks pizza!</h1>
+            </div>
+        </div>
+        <div id="footer-row">
+            <p>&copy;2019 mischief LLC</p>
+        </div>
+    </div>
+</body>
+
+</html>
