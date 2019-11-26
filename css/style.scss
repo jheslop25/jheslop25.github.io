@@ -14,7 +14,25 @@ felt cute might delete later */
     }
 }
 
-
+.nav-link-red {
+    color: $header-color;
+        text-align: center;
+        margin: 10px 10px 10px 10px;
+        font-family: $primary-font;
+        font-size: 2.0rem;
+        text-decoration: none;
+        background-color: $background-off-white;
+        border-style: solid;
+        border-width: 2px;
+        border-color: $header-color;
+        border-radius: 35px;
+        padding: 5px 15px 5px 15px;
+        &:hover {
+            background-color: $header-color;
+            color: $secondary-text-color;
+           
+        }
+}
 
 
 /* strip away default margin and padding */
@@ -42,15 +60,16 @@ felt cute might delete later */
     grid-template-columns: 100vw;
     grid-template-rows: minmax(10vh, auto) minmax(10vh auto);
     justify-items: center;
+    align-items: center;
     top: 0;
     background-color: $header-color;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
     #logo {
         height: 15vh;
         padding: 10px;
     }
-    #nav-menu {
-        display: grid;
-    }
+    
     
     .nav-link a {
         color: $secondary-text-color;
@@ -65,6 +84,9 @@ felt cute might delete later */
         border-color: $secondary-text-color;
         border-radius: 20px;
         padding: 5px 15px 5px 15px;
+        &:hover {
+            background-color: $secondary-button-color;
+        }
     }
     
 }
@@ -92,17 +114,21 @@ felt cute might delete later */
         font-family: $primary-font;
     }
     
-    #call-to-action-container {
-        font-size: 1.8rem;
-        font-family: $primary-font;
-        @include button-nav(none, 5px 15px 5px 15px, 6px, $primary-button-color, $primary-text-color)
-    }
     
     #image-container {
         width: 100vw;
     }
     #background {
         background-color: $header-color;
+    }
+    #some-text {
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+        grid-template-columns: auto;
+        #about-link {
+            justify-self: right;
+            margin-right: 5%;
+        }
     }
     
     
@@ -130,6 +156,13 @@ felt cute might delete later */
     }
     #header {
         border-bottom-left-radius: 60px;
+        #nav-menu {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4, minmax(7vh, auto));
+        }
     }
     #page-content {
         border-top-right-radius: 60px;
@@ -155,7 +188,7 @@ felt cute might delete later */
     }
     #some-text p {
         text-align: right;
-        margin-bottom: 10vh;
+        margin-bottom: 4vh;
         font-family: $primary-font;
         font-size: 1.2rem;
     }
@@ -170,8 +203,8 @@ felt cute might delete later */
         width: 175px;
         transform: rotate(-27deg);
         position: relative;
-        bottom: 3vh;
         left: 5vw;
+        margin-top: 10px;
     }
     #home-image-two {
         display: none;
@@ -187,6 +220,14 @@ felt cute might delete later */
     justify-items: center;
     background-color: $header-color;
     border-bottom-left-radius: 60px;
+
+    #nav-menu {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4, minmax(7vh, auto));
+        }
     }
     #desktop-phone {
         display: none;
@@ -218,7 +259,7 @@ felt cute might delete later */
     }
     #some-text p {
         text-align: right;
-        margin-bottom: 11vh;
+        margin-bottom: 4vh;
         font-family: $primary-font;
         font-size: 1.1rem;
         width: 70%;
@@ -260,11 +301,27 @@ felt cute might delete later */
         height: 15vh;
         width: 100%;
         grid-template-rows: auto;
-        grid-template-columns: 15vw 15vw 15vw 15vw;
+        grid-template-columns: repeat(auto-fill, minmax(15vw, auto));
         align-items: center;
         justify-items: center;
         column-gap: 10px;
-        
+        #desktop-phone {
+                color: $secondary-text-color;
+                text-align: center;
+                margin: 10px 10px 10px 10px;
+                font-family: $primary-font;
+                font-size: 1.1rem;
+                text-decoration: none;
+                background-color: $header-color;
+                border-style: solid;
+                border-width: 2px;
+                border-color: $secondary-text-color;
+                border-radius: 20px;
+                padding: 5px 20px 5px 20px;
+                &:hover {
+                    background-color: $secondary-button-color;
+                }
+        }
         
     }
     .nav-link {
@@ -279,6 +336,8 @@ felt cute might delete later */
         background-color: white;
         border-bottom-left-radius: 60px;
         background-color: $background-off-white;
+        
+        
         #headline-container {
             justify-self: start;
             text-align: start;
@@ -301,7 +360,7 @@ felt cute might delete later */
     }
     #some-text p {
         text-align: right;
-        margin-bottom: 11vh;
+        margin-bottom: 4vh;
         font-family: $primary-font;
         font-size: 1.1rem;
         width: 40%;
@@ -319,7 +378,7 @@ felt cute might delete later */
     #home-image-two {
         width: 300px;
         position: absolute;
-        top: 55%;
+        top: 60%;
         left: 5%;
         transform: rotate(48deg);
     }
@@ -332,5 +391,10 @@ felt cute might delete later */
     }
 }
 
-
-
+@media screen and (min-width: 601px) and (max-width: 941px) {
+    #nav-menu {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(50%, 1fr));
+        grid-template-rows: repeat(2,minmax(50%, 1fr));
+    }
+}

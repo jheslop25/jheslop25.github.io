@@ -5,19 +5,28 @@
     margin: 0;
     padding: 0;
 }
-/* define overly complicated @mixin for shits and giggles. 
-felt cute might delete later */
-
-@mixin button-nav($text-dec, $padding, $radius, $background-color, $color) {
-    text-decoration: $text-dec;
-    padding: $padding;
-    border-radius: $radius;
-    background-color: $background-color;
-    a {
-        color: $color;
-        text-decoration: $text-dec;
-    }
+.nav-link-red {
+    color: $header-color;
+        text-align: center;
+        margin: 10px 10px 10px 10px;
+        font-family: $primary-font;
+        font-size: 2.0rem;
+        text-decoration: none;
+        background-color: $background-off-white;
+        border-style: solid;
+        border-width: 2px;
+        border-color: $header-color;
+        border-radius: 35px;
+        padding: 5px 15px 5px 15px;
+        &:hover {
+            background-color: $header-color;
+            color: $secondary-text-color;
+           
+        }
 }
+
+
+
 
 /* define parent grid */
 
@@ -27,6 +36,7 @@ felt cute might delete later */
     grid-template-columns: 100vw;
     grid-template-rows: minmax(10vh, auto) minmax(80vh, auto) minmax(10vh, auto);
     justify-items: center;
+    background-color: $background-off-white;
     
 }
 
@@ -37,19 +47,128 @@ felt cute might delete later */
     grid-template-columns: 100vw;
     grid-template-rows: minmax(10vh, auto) minmax(10vh auto);
     justify-items: center;
+    align-items: center;
     top: 0;
     background-color: $header-color;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
     #logo {
         height: 15vh;
         padding: 10px;
     }
     
-    .nav-link {
-        @include button-nav(none ,5px 5px 5px 5px, 6px, $primary-button-color,$primary-text-color);
+    
+    .nav-link a {
+        color: $secondary-text-color;
         text-align: center;
-        margin: 5px 0 5px 0;
+        margin: 10px 10px 10px 10px;
+        font-family: $primary-font;
+        font-size: 1.1rem;
+        text-decoration: none;
+        background-color: $header-color;
+        border-style: solid;
+        border-width: 2px;
+        border-color: $secondary-text-color;
+        border-radius: 20px;
+        padding: 5px 15px 5px 15px;
+        &:hover {
+            background-color: $secondary-button-color;
+        }
+    }
+    
+}
+
+/* define page content grid */
+
+#background {
+    background-color: $header-color;
+    width: 100%;
+    
+}    
+#foreground {
+    border-top-right-radius: 60px;
+    background-color: white;
+    border-bottom-left-radius: 60px;
+    background-color: $background-off-white;
+    padding-top: 3vh;
+    padding-bottom: 15vh;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: minmax(10vh, auto) minmax(60vh, auto);
+    justify-items: center;
+}
+
+#page-content {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fill, minmax(px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(15vh, auto));
+    column-gap: 25px;
+    row-gap: 25px;
+    justify-items: center;
+    align-items: center;
+    
+    
+}
+
+/*define styles for menu cards */
+
+.menu-item {
+    display: grid;
+    width: 90%;
+    height: 15vh;
+    grid-template-columns: 50% 50%;
+    background-color: white;
+    align-items: center;
+    transform: translateY(0px);
+    transition: 700ms;
+    padding: 3vw 3vh;
+    border-radius: 5px;
+    box-shadow: 5px 3px 10px $shadow-color;
+    p, li {
+        color: $primary-text-color;
+        font-family: $primary-font;
+    }
+    li {
+       display: none;
+    }
+    .details {
+        font-size: 1.2rem;
+        margin-top: 5px;
+        font-family: $primary-font;
+    }
+    &:hover {
+        width: 60%;
+        height: 35vh;
+        margin: 15px;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(2, minmax(10vh,auto));
+        justify-items: center;
+        align-items: center;
+        transform: translateY(-20px);
+        li {
+            display: list-item;
+        }
+        .details {
+            display: none;
+        }
     }
 }
+
+.page-title p {
+    font-size: 2.5rem;
+    font-family: $primary-font;
+}
+
+.menu-image img {
+    width: 100px;
+}
+
+.item-title {
+    font-size: 1.5rem;
+}
+
 
 /* define footer */
 
@@ -60,19 +179,75 @@ felt cute might delete later */
     justify-items: center;
     align-items: center;
     background-color: $header-color;
+    p {
+        color: $secondary-text-color;
+    }
 }
 
-@media screen and (min-width: 343px) and (max-width: 700px) {
+@media screen and (max-width: 375px) {
+    #desktop-phone {
+        display: none;
+        visibility: hidden;
+    }
+    #header {
+        border-bottom-left-radius: 60px;
+        #nav-menu {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4, minmax(7vh, auto));
+        }
+    }
+    
+    #background {
+        background-color: $header-color;
+    }
+    #footer {
+        border-top-right-radius: 60px;
+    }
+   
+
+}
+
+@media screen and (min-width: 375px) and (max-width: 600px) {
     #header {
     display: grid;
     grid-template-columns: 50vw 50vw;
     grid-template-rows: auto;
     justify-items: center;
     background-color: $header-color;
+    border-bottom-left-radius: 60px;
+
+    #nav-menu {
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4, minmax(7vh, auto));
+        }
     }
+    #desktop-phone {
+        display: none;
+        visibility: hidden;
+    }
+    #page-content {
+        border-top-right-radius: 60px;
+        background-color: white;
+        border-bottom-left-radius: 60px;
+        background-color: $background-off-white;
+        
+        
+    }
+    #background {
+        background-color: $header-color;
+    }
+    #footer {
+        border-top-right-radius: 60px;
+    }    
 }
 
-@media screen and (min-width: 701px) {
+@media screen and (min-width: 601px) {
     #header {
     display: grid;
     grid-template-columns: 30vw 70vw;
@@ -80,6 +255,7 @@ felt cute might delete later */
     justify-items: center;
     align-items: center;
     background-color: $header-color;
+    border-bottom-left-radius: 60px;
     
     }
     #nav-menu {
@@ -87,54 +263,79 @@ felt cute might delete later */
         height: 15vh;
         width: 100%;
         grid-template-rows: auto;
-        grid-template-columns: 15vw 15vw 15vw 15vw;
+        grid-template-columns: repeat(auto-fill, minmax(15vw, auto));
         align-items: center;
+        justify-items: center;
         column-gap: 10px;
-        
+        #desktop-phone {
+                color: $secondary-text-color;
+                text-align: center;
+                margin: 10px 10px 10px 10px;
+                font-family: $primary-font;
+                font-size: 1.1rem;
+                text-decoration: none;
+                background-color: $header-color;
+                border-style: solid;
+                border-width: 2px;
+                border-color: $secondary-text-color;
+                border-radius: 20px;
+                padding: 5px 20px 5px 20px;
+                &:hover {
+                    background-color: $secondary-button-color;
+                }
+        }
         
     }
     .nav-link {
         margin: 5px 5px 5px 5px;
-        #phone {
-            pointer-events: none;
-        }
-        
     }
+    #mobile-href {
+        display: none;
+        visibility: hidden;
+    }
+    .details {
+        display: none;
+    }
+    #page-content {
+        border-top-right-radius: 60px;
+        background-color: white;
+        border-bottom-left-radius: 60px;
+        background-color: $background-off-white;
+    }
+    #background {
+        background-color: $header-color;
+        width: 100vw;
+    }
+    #footer {
+        border-top-right-radius: 60px;
+    }
+    
 }
 
+@media screen and (min-width: 601px) and (max-width: 941px) {
+    #nav-menu {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(50%, 1fr));
+        grid-template-rows: repeat(2,minmax(50%, 1fr));
+    }
+}
 /* define page-content grid */
 
 #page-content {
     display: grid;
-    width: 90vw;
+    width: 100%;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(15vh, auto));
     column-gap: 15px;
     row-gap: 15px;
     align-items: center;
-    padding: 5vw 5vh;
+    border-top-right-radius: 60px;
+    background-color: white;
+    border-bottom-left-radius: 60px;
+    background-color: $background-off-white;
     
 }
 
 /*define styles for menu cards */
 
-.menu-item {
-    display: grid;
-    width: 100%;
-    height: 25vh;
-    grid-template-columns: 50% 50%;
-    background-color: #E8E8E8;
-    align-items: center;
-    p, li {
-        color: $primary-text-color;
-    }
-}
-
-.menu-image img {
-    width: 100px;
-}
-
-.item-title {
-    font-size: 1.5rem;
-}
 

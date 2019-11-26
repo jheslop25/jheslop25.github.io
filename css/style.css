@@ -1,6 +1,26 @@
 @import url("https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap");
 /* define overly complicated @mixin for shits and giggles. 
 felt cute might delete later */
+.nav-link-red {
+  color: #9E221A;
+  text-align: center;
+  margin: 10px 10px 10px 10px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 2.0rem;
+  text-decoration: none;
+  background-color: #F0F0F0;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #9E221A;
+  border-radius: 35px;
+  padding: 5px 15px 5px 15px;
+}
+
+.nav-link-red:hover {
+  background-color: #9E221A;
+  color: white;
+}
+
 /* strip away default margin and padding */
 * {
   margin: 0;
@@ -29,18 +49,18 @@ felt cute might delete later */
   -ms-grid-rows: minmax(10vh, auto) minmax(10vh auto);
       grid-template-rows: minmax(10vh, auto) minmax(10vh auto);
   justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   top: 0;
   background-color: #9E221A;
+  padding-top: 2vh;
+  padding-bottom: 2vh;
 }
 
 #header #logo {
   height: 15vh;
   padding: 10px;
-}
-
-#header #nav-menu {
-  display: -ms-grid;
-  display: grid;
 }
 
 #header .nav-link a {
@@ -56,6 +76,10 @@ felt cute might delete later */
   border-color: white;
   border-radius: 20px;
   padding: 5px 15px 5px 15px;
+}
+
+#header .nav-link a:hover {
+  background-color: #5F1410;
 }
 
 /* define page content grid */
@@ -88,26 +112,27 @@ felt cute might delete later */
   font-family: "Merriweather Sans", sans-serif;
 }
 
-#page-content #call-to-action-container {
-  font-size: 1.8rem;
-  font-family: "Merriweather Sans", sans-serif;
-  text-decoration: none;
-  padding: 5px 15px 5px 15px;
-  border-radius: 6px;
-  background-color: #9E221A;
-}
-
-#page-content #call-to-action-container a {
-  color: black;
-  text-decoration: none;
-}
-
 #page-content #image-container {
   width: 100vw;
 }
 
 #page-content #background {
   background-color: #9E221A;
+}
+
+#page-content #some-text {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (auto)[2];
+      grid-template-rows: repeat(2, auto);
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+}
+
+#page-content #some-text #about-link {
+  -ms-grid-column-align: right;
+      justify-self: right;
+  margin-right: 5%;
 }
 
 /* define footer */
@@ -137,6 +162,18 @@ felt cute might delete later */
   #header {
     border-bottom-left-radius: 60px;
   }
+  #header #nav-menu {
+    display: -ms-grid;
+    display: grid;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: (minmax(7vh, auto))[4];
+        grid-template-rows: repeat(4, minmax(7vh, auto));
+  }
   #page-content {
     border-top-right-radius: 60px;
     background-color: white;
@@ -161,7 +198,7 @@ felt cute might delete later */
   }
   #some-text p {
     text-align: right;
-    margin-bottom: 10vh;
+    margin-bottom: 4vh;
     font-family: "Merriweather Sans", sans-serif;
     font-size: 1.2rem;
   }
@@ -176,8 +213,8 @@ felt cute might delete later */
     -webkit-transform: rotate(-27deg);
             transform: rotate(-27deg);
     position: relative;
-    bottom: 3vh;
     left: 5vw;
+    margin-top: 10px;
   }
   #home-image-two {
     display: none;
@@ -195,6 +232,18 @@ felt cute might delete later */
     justify-items: center;
     background-color: #9E221A;
     border-bottom-left-radius: 60px;
+  }
+  #header #nav-menu {
+    display: -ms-grid;
+    display: grid;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    -ms-grid-rows: (minmax(7vh, auto))[4];
+        grid-template-rows: repeat(4, minmax(7vh, auto));
   }
   #desktop-phone {
     display: none;
@@ -226,7 +275,7 @@ felt cute might delete later */
   }
   #some-text p {
     text-align: right;
-    margin-bottom: 11vh;
+    margin-bottom: 4vh;
     font-family: "Merriweather Sans", sans-serif;
     font-size: 1.1rem;
     width: 70%;
@@ -275,14 +324,31 @@ felt cute might delete later */
     width: 100%;
     -ms-grid-rows: auto;
         grid-template-rows: auto;
-    -ms-grid-columns: 15vw 15vw 15vw 15vw;
-        grid-template-columns: 15vw 15vw 15vw 15vw;
+    -ms-grid-columns: (minmax(15vw, auto))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(15vw, auto));
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     justify-items: center;
     -webkit-column-gap: 10px;
             column-gap: 10px;
+  }
+  #nav-menu #desktop-phone {
+    color: white;
+    text-align: center;
+    margin: 10px 10px 10px 10px;
+    font-family: "Merriweather Sans", sans-serif;
+    font-size: 1.1rem;
+    text-decoration: none;
+    background-color: #9E221A;
+    border-style: solid;
+    border-width: 2px;
+    border-color: white;
+    border-radius: 20px;
+    padding: 5px 20px 5px 20px;
+  }
+  #nav-menu #desktop-phone:hover {
+    background-color: #5F1410;
   }
   .nav-link {
     margin: 5px 5px 5px 5px;
@@ -318,7 +384,7 @@ felt cute might delete later */
   }
   #some-text p {
     text-align: right;
-    margin-bottom: 11vh;
+    margin-bottom: 4vh;
     font-family: "Merriweather Sans", sans-serif;
     font-size: 1.1rem;
     width: 40%;
@@ -335,7 +401,7 @@ felt cute might delete later */
   #home-image-two {
     width: 300px;
     position: absolute;
-    top: 55%;
+    top: 60%;
     left: 5%;
     -webkit-transform: rotate(48deg);
             transform: rotate(48deg);
@@ -347,6 +413,17 @@ felt cute might delete later */
     position: relative;
     bottom: 3vh;
     left: 45vw;
+  }
+}
+
+@media screen and (min-width: 601px) and (max-width: 941px) {
+  #nav-menu {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(50%, 1fr))[2];
+        grid-template-columns: repeat(2, minmax(50%, 1fr));
+    -ms-grid-rows: (minmax(50%, 1fr))[2];
+        grid-template-rows: repeat(2, minmax(50%, 1fr));
   }
 }
 /*# sourceMappingURL=style.css.map */
