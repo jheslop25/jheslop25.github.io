@@ -86,7 +86,7 @@
       grid-template-columns: 100vw;
   -ms-grid-rows: (minmax(10vh, 1fr))[auto-fill];
       grid-template-rows: repeat(auto-fill, minmax(10vh, 1fr));
-  justify-items: left;
+  justify-items: center;
   border-top-right-radius: 60px;
   background-color: white;
   border-bottom-left-radius: 60px;
@@ -95,24 +95,42 @@
   padding-bottom: 15vh;
 }
 
-#map-container {
-  height: 450px;
-  width: 100vw;
-}
-
 #address-container {
   display: -ms-grid;
   display: grid;
+  justify-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 15px;
 }
 
-#address-container p {
+#address-container #headline {
   font-size: 1.5rem;
   margin: 5px;
   font-family: "Merriweather Sans", sans-serif;
+}
+
+#address-container #address {
+  font-size: 1.2rem;
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+#address-container #hours {
+  font-size: 1.0rem;
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+#address-container hr {
+  width: 90%;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 #footer {
@@ -152,6 +170,18 @@
         grid-template-columns: auto;
     -ms-grid-rows: (minmax(7vh, auto))[4];
         grid-template-rows: repeat(4, minmax(7vh, auto));
+  }
+  #map-container {
+    height: 60vh;
+    width: 100vw;
+    display: -ms-grid;
+    display: grid;
+    justify-items: center;
+  }
+  #map-container iframe {
+    height: 60vh;
+    width: 90%;
+    border-radius: 6px;
   }
   #background {
     background-color: #9E221A;
@@ -194,6 +224,18 @@
     background-color: white;
     border-bottom-left-radius: 60px;
     background-color: #F0F0F0;
+  }
+  #map-container {
+    height: 60vh;
+    width: 100vw;
+    display: -ms-grid;
+    display: grid;
+    justify-items: center;
+  }
+  #map-container iframe {
+    height: 60vh;
+    width: 90%;
+    border-radius: 6px;
   }
   #background {
     background-color: #9E221A;
@@ -263,6 +305,18 @@
     background-color: white;
     border-bottom-left-radius: 60px;
     background-color: #F0F0F0;
+  }
+  #map-container {
+    height: 60vh;
+    width: 100vw;
+    display: -ms-grid;
+    display: grid;
+    justify-items: center;
+  }
+  #map-container iframe {
+    height: 60vh;
+    width: 90%;
+    border-radius: 6px;
   }
   #background {
     background-color: #9E221A;

@@ -6,20 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="description" content="Welcome to Okotoks Pizza - awesome pizza from a family run joint">
-    <meta name="keywords" content="pizza, delivery, okotoks\,ab, okotoks pizza">
+    <meta name="keywords" content="pizza, delivery, okotoks\,ab, okotoks pizza, menu, pizza menu, dessert menu, drink menu">
     <meta name="author" content="doug the dude who owns this place">
     <title>Menu - Okotoks Pizza</title>
     <link rel="stylesheet" type="text/css" href="../css/menu.css">
 </head>
 
 <body>
+    <div id="overlay"></div>
     <div id="parent-container">
         <!-- header and menu html -->
         <div id="header">
             <div id="logo-container"><a href="../index.html"><img id="logo" src="../images/okotoks-pizza-logo.png"
                         alt="okotoks pizza logo"></a></div>
             <div id="nav-menu">
-                <div class="nav-link" id="phone"><a href="tel:4035555555">403-555-5555</a></div>
+                <div class="nav-link" id="phone"><a id="mobile-href" href="tel:4035555555">403-555-5555</a>
+                    <p id="desktop-phone">403-555-5555</p>
+                    </p>
+                </div>
                 <div class="nav-link" id="menu"><a href="menu.html">Menu</a></div>
                 <div class="nav-link" id="location"><a href="location.html">Find Us</a></div>
                 <div class="nav-link" id="about-us"><a href="about.html">About Us</a></div>
@@ -29,316 +33,456 @@
         <!-- content container html -->
         <div id="background">
             <div id="foreground">
-                    <div id="headline" class="page-title">
-                            <p>Pizza Menu</p>
-                        </div>
-                <div id="page-content">
-                    
+                <div id="headline" class="page-title">
+                    <p>Pizza Menu</p>
+                </div>
+                <div class="page-content">
                     <div id="card-1" class="menu-item">
                         <div class="menu-image">
-                            <img src="../images/okotoks-pizza-logo.png" alt="item photo">
+                            <img src="../images/menu-pizza1.jpg" alt="item photo">
                         </div>
                         <div class="text-container">
                             <div class="item-title">
-                                <p>Hawaiian Pizza</p>
+                                <p>Hawaiian Pizza $23</p>
                             </div>
                             <div class="toppings">
                                 <ul>
-                                    <li>Ham</li>
-                                    <li>Pineapple</li>
-                                    <li>Cheese</li>
-                                    <li>Ham</li>
-                                    <li>Pineapple</li>
-                                    <li>Cheese</li>
+                                    <li>Loads of ham, pineapple and extra cheese that will make you say Aloha!</li>
+
                                 </ul>
                                 <p class="details">Tap for Details</p>
+                                <a class="order-button hide" href="tel:4035555555">Call To Order</a>
                             </div>
                         </div>
                     </div>
 
+
                     <div id="card-2" class="menu-item">
                         <div class="menu-image">
-                            <img src="../images/okotoks-pizza-logo.png" alt="item photo">
+                            <img src="../images/menu-pizza2.jpg" alt="item photo">
                         </div>
                         <div class="text-container">
                             <div class="item-title">
-                                <p>Hawaiian Pizza</p>
+                                <p>Deluxe $22</p>
                             </div>
                             <div class="toppings">
                                 <ul>
-                                    <li>Ham</li>
-                                    <li>Pineapple</li>
-                                    <li>Cheese</li>
+                                    <li>Mushrooms, onions, fresh green peppers, sliced pepperoni, smoked Italian
+                                        sausage
+                                        and cheese.</li>
                                 </ul>
                                 <p class="details">Tap for Details</p>
+                                <a class="order-button hide" href="tel:4035555555">Call To Order</a>
                             </div>
                         </div>
                     </div>
                     <div id="card-3" class="menu-item">
                         <div class="menu-image">
-                            <img src="../images/okotoks-pizza-logo.png" alt="item photo">
+                            <img src="../images/menu-pizza3.jpg" alt="item photo">
                         </div>
                         <div class="text-container">
                             <div class="item-title">
-                                <p>Hawaiian Pizza</p>
+                                <p>Meat Lovers $26</p>
                             </div>
                             <div class="toppings">
                                 <ul>
-                                    <li>Ham</li>
-                                    <li>Pineapple</li>
-                                    <li>Cheese</li>
+                                    <li>Pepperoni, shredded bacon, smoked sausage and cheese</li>
                                 </ul>
                                 <p class="details">Tap for Details</p>
+                                <a class="order-button hide" href="tel:4035555555">Call To Order</a>
                             </div>
                         </div>
                     </div>
                     <div id="card-4" class="menu-item">
                         <div class="menu-image">
-                            <img src="../images/okotoks-pizza-logo.png" alt="item photo">
+                            <img src="../images/menu-pizza4.jpg" alt="item photo">
                         </div>
                         <div class="text-container">
                             <div class="item-title">
-                                <p>Hawaiian Pizza</p>
+                                <p>Cheese $18</p>
                             </div>
                             <div class="toppings">
                                 <ul>
-                                    <li>Ham</li>
-                                    <li>Pineapple</li>
-                                    <li>Cheese</li>
+                                    <li>Cheese, cheese and more cheese!</li>
                                 </ul>
                             </div>
                             <p class="details">Tap for Details</p>
+                            <a class="order-button hide" href="tel:4035555555">Call To Order</a>
                         </div>
                     </div>
                     <div id="card-5" class="menu-item">
                         <div class="menu-image">
-                            <img src="../images/okotoks-pizza-logo.png" alt="item photo">
+                            <img src="../images/menu-pizza5.jpg" alt="item photo">
                         </div>
                         <div class="text-container">
                             <div class="item-title">
-                                <p>Hawaiian Pizza</p>
+                                <p>Vegetarian $21</p>
                             </div>
                             <div class="toppings">
                                 <ul>
-                                    <li>Ham</li>
-                                    <li>Pineapple</li>
-                                    <li>Cheese</li>
-                                    <li>Ham</li>
-                                    <li>Pineapple</li>
-                                    <li>Cheese</li>
+                                    <li>Mushrooms, green peppers, tomatoes, onions and cheese</li>
                                 </ul>
                                 <p class="details">Tap for Details</p>
+                                <a class="order-button hide" href="tel:4035555555">Call To Order</a>
                             </div>
                         </div>
                     </div>
                     <div id="card-6" class="menu-item">
                         <div class="menu-image">
-                            <img src="../images/okotoks-pizza-logo.png" alt="item photo">
+                            <img src="../images/menu-pizza6.jpeg" alt="item photo">
                         </div>
                         <div class="text-container">
                             <div class="item-title">
-                                <p>Hawaiian Pizza</p>
+                                <p>Buffalo Chicken $22</p>
                             </div>
                             <div class="toppings">
                                 <ul>
-                                    <li>Ham</li>
-                                    <li>Pineapple</li>
-                                    <li>Cheese</li>
+                                    <li>Buffalo sauce, onions, chicken and cheese.</li>
                                 </ul>
                                 <p class="details">Tap for Details</p>
+                                <a class="order-button hide" href="tel:4035555555">Call To Order</a>
                             </div>
                         </div>
                     </div>
                     <div id="card-7" class="menu-item">
                         <div class="menu-image">
-                            <img src="../images/okotoks-pizza-logo.png" alt="item photo">
+                            <img src="../images/menu-pizza7.jpeg" alt="item photo">
                         </div>
                         <div class="text-container">
                             <div class="item-title">
-                                <p>Hawaiian Pizza</p>
+                                <p>Donair $23</p>
                             </div>
                             <div class="toppings">
                                 <ul>
-                                    <li>Ham</li>
-                                    <li>Pineapple</li>
-                                    <li>Cheese</li>
+                                    <li>Onions, green peppers, banana peppers, beef donair and cheese, all topped on
+                                        our
+                                        homemade donair sauce.</li>
                                 </ul>
                                 <p class="details">Tap for Details</p>
+                                <a class="order-button hide" href="tel:4035555555">Call To Order</a>
                             </div>
                         </div>
                     </div>
                     <div id="card-8" class="menu-item">
                         <div class="menu-image">
-                            <img src="../images/okotoks-pizza-logo.png" alt="item photo">
+                            <img src="../images/menu-pizza8.jpg" alt="item photo">
                         </div>
                         <div class="text-container">
                             <div class="item-title">
-                                <p>Hawaiian Pizza</p>
+                                <p>Tropical Chicken $23</p>
                             </div>
                             <div class="toppings">
                                 <ul>
-                                    <li>Ham</li>
-                                    <li>Pineapple</li>
-                                    <li>Cheese</li>
+                                    <li>Signature alfredo sauce, topped with chicken, bacon and pineapples.</li>
                                 </ul>
                                 <p class="details">Tap for Details</p>
+                                <a class="order-button hide" href="tel:4035555555">Call To Order</a>
                             </div>
                         </div>
                     </div>
                     <div id="card-9" class="menu-item">
                         <div class="menu-image">
-                            <img src="../images/okotoks-pizza-logo.png" alt="item photo">
+                            <img src="../images/menu-pizza9.jpg" alt="item photo">
                         </div>
                         <div class="text-container">
                             <div class="item-title">
-                                <p>Hawaiian Pizza</p>
+                                <p>Greek $24</p>
                             </div>
                             <div class="toppings">
                                 <ul>
-                                    <li>Ham</li>
-                                    <li>Pineapple</li>
-                                    <li>Cheese</li>
-                                    <li>Ham</li>
-                                    <li>Pineapple</li>
-                                    <li>Cheese</li>
+                                    <li>Spinach, feta cheese, tomatoes, black olives and cheese.</li>
                                 </ul>
                                 <p class="details">Tap for Details</p>
+                                <a class="order-button hide" href="tel:4035555555">Call To Order</a>
                             </div>
                         </div>
                     </div>
                     <div id="card-10" class="menu-item">
                         <div class="menu-image">
-                            <img src="../images/okotoks-pizza-logo.png" alt="item photo">
+                            <img src="../images/menu-pizza10.jpg" alt="item photo">
                         </div>
                         <div class="text-container">
                             <div class="item-title">
-                                <p>Hawaiian Pizza</p>
+                                <p>Shawarma Pizza $25</p>
                             </div>
                             <div class="toppings">
                                 <ul>
-                                    <li>Ham</li>
-                                    <li>Pineapple</li>
-                                    <li>Cheese</li>
+                                    <li>Signature sweet sauce, red onions, shawarma chicken, tomatoes and cheese
+                                    </li>
                                 </ul>
                                 <p class="details">Tap for Details</p>
+                                <a class="order-button hide" href="tel:4035555555">Call To Order</a>
                             </div>
                         </div>
                     </div>
                     <div id="card-11" class="menu-item">
                         <div class="menu-image">
-                            <img src="../images/okotoks-pizza-logo.png" alt="item photo">
+                            <img src="../images/menu-pizza11.jpg" alt="item photo">
                         </div>
                         <div class="text-container">
                             <div class="item-title">
-                                <p>Hawaiian Pizza</p>
+                                <p>Beef Tandoori $24</p>
                             </div>
                             <div class="toppings">
                                 <ul>
-                                    <li>Ham</li>
-                                    <li>Pineapple</li>
-                                    <li>Cheese</li>
+                                    <li>Zesty beef, red onions, jalapeños and cheese.
+                                    </li>
                                 </ul>
                                 <p class="details">Tap for Details</p>
+                                <a class="order-button hide" href="tel:4035555555">Call To Order</a>
                             </div>
                         </div>
                     </div>
                     <div id="card-12" class="menu-item">
                         <div class="menu-image">
-                            <img src="../images/okotoks-pizza-logo.png" alt="item photo">
+                            <img src="../images/menu-pizza12.jpg" alt="item photo">
                         </div>
                         <div class="text-container">
                             <div class="item-title">
-                                <p>Hawaiian Pizza</p>
+                                <p>Pepperoni $21</p>
                             </div>
                             <div class="toppings">
                                 <ul>
-                                    <li>Ham</li>
-                                    <li>Pineapple</li>
-                                    <li>Cheese</li>
+                                    <li>Loaded with extra pepperoni and cheese.</li>
                                 </ul>
                                 <p class="details">Tap for Details</p>
+                                <a class="order-button hide" href="tel:4035555555">Call To Order</a>
                             </div>
                         </div>
                     </div>
-                    <div class="page-title">
-                        <p>Drinks Menu</p>
-                    </div>
+                </div>
+                <div id="headline" class="page-title">
+                    <p>Drinks Menu</p>
+                </div>
+                <div class="page-content">
+
                     <div id="card-13" class="menu-item">
                         <div class="menu-image">
-                            <img src="../images/okotoks-pizza-logo.png" alt="item photo">
+                            <img src="../images/drink1.jpg" alt="item photo">
                         </div>
                         <div class="text-container">
                             <div class="item-title">
-                                <p>Hawaiian Pizza</p>
+                                <p>Sorrel Drink $7</p>
                             </div>
                             <div class="toppings">
                                 <ul>
-                                    <li>Ham</li>
-                                    <li>Pineapple</li>
-                                    <li>Cheese</li>
-                                    <li>Ham</li>
-                                    <li>Pineapple</li>
-                                    <li>Cheese</li>
+                                    <li></li>
                                 </ul>
                                 <p class="details">Tap for Details</p>
+                                <a class="order-button hide" href="tel:4035555555">Order</a>
                             </div>
                         </div>
                     </div>
+
                     <div id="card-14" class="menu-item">
                         <div class="menu-image">
-                            <img src="../images/okotoks-pizza-logo.png" alt="item photo">
+                            <img src="../images/drink2.jpg" alt="item photo">
                         </div>
                         <div class="text-container">
                             <div class="item-title">
-                                <p>Hawaiian Pizza</p>
+                                <p>Paloma Cocktail $6</p>
                             </div>
                             <div class="toppings">
                                 <ul>
-                                    <li>Ham</li>
-                                    <li>Pineapple</li>
-                                    <li>Cheese</li>
+                                    <li></li>
                                 </ul>
                                 <p class="details">Tap for Details</p>
+                                <a class="order-button hide" href="tel:4035555555">Order</a>
                             </div>
                         </div>
                     </div>
                     <div id="card-15" class="menu-item">
                         <div class="menu-image">
-                            <img src="../images/okotoks-pizza-logo.png" alt="item photo">
+                            <img src="../images/drink3.jpg" alt="item photo">
                         </div>
                         <div class="text-container">
                             <div class="item-title">
-                                <p>Hawaiian Pizza</p>
+                                <p>Oatly Orange Sunrise $8</p>
                             </div>
                             <div class="toppings">
                                 <ul>
-                                    <li>Ham</li>
-                                    <li>Pineapple</li>
-                                    <li>Cheese</li>
+                                    <li>Oatly,</li>
+                                    <li>Orange,</li>
+                                    <li>A healthy Dose of Sunrise</li>
                                 </ul>
                                 <p class="details">Tap for Details</p>
+                                <a class="order-button hide" href="tel:4035555555">Order</a>
                             </div>
                         </div>
                     </div>
                     <div id="card-16" class="menu-item">
                         <div class="menu-image">
-                            <img src="../images/okotoks-pizza-logo.png" alt="item photo">
+                            <img src="../images/drink14.jpg" alt="item photo">
                         </div>
                         <div class="text-container">
                             <div class="item-title">
-                                <p>Hawaiian Pizza</p>
+                                <p>Blue Mermaid Cocktail $9</p>
                             </div>
                             <div class="toppings">
                                 <ul>
-                                    <li>Ham</li>
-                                    <li>Pineapple</li>
-                                    <li>Cheese</li>
+                                    <li>A Little Blue,</li>
+                                    <li>Some Fresh Ground Mermaid,</li>
+                                    <li>Finish with a dash of Cocktail</li>
+                                </ul>
+                            </div>
+                            <p class="details">Tap for Details</p>
+                            <a class="order-button hide" href="tel:4035555555">Order</a>
+                        </div>
+                    </div>
+                    <div id="card-21" class="menu-item">
+                        <div class="menu-image">
+                            <img src="../images/drink5.jpg" alt="item photo">
+                        </div>
+                        <div class="text-container">
+                            <div class="item-title">
+                                <p>Fanta $4</p>
+                            </div>
+                            <div class="toppings">
+                                <ul>
+                                    <li>uhh.. fanta?</li>
+                                </ul>
+                            </div>
+                            <p class="details">Tap for Details</p>
+                            <a class="order-button hide" href="tel:4035555555">Order</a>
+                        </div>
+                    </div>
+                    <div id="card-22" class="menu-item">
+                        <div class="menu-image">
+                            <img src="../images/drink6.jpg" alt="item photo">
+                        </div>
+                        <div class="text-container">
+                            <div class="item-title">
+                                <p>Orange Crush $3</p>
+                            </div>
+                            <div class="toppings">
+                                <ul>
+                                    <li>Orange</li>
+                                </ul>
+                            </div>
+                            <p class="details">Tap for Details</p>
+                            <a class="order-button hide" href="tel:4035555555">Order</a>
+                        </div>
+                    </div>
+                    <div id="card-23" class="menu-item">
+                        <div class="menu-image">
+                            <img src="../images/drink7.jpeg" alt="item photo">
+                        </div>
+                        <div class="text-container">
+                            <div class="item-title">
+                                <p>Solo $6</p>
+                            </div>
+                            <div class="toppings">
+                                <ul>
+                                    
+                                </ul>
+                            </div>
+                            <p class="details">Tap for Details</p>
+                            <a class="order-button hide" href="tel:4035555555">Order</a>
+                        </div>
+                    </div>
+                    <div id="card-24" class="menu-item">
+                        <div class="menu-image">
+                            <img src="../images/drink8.jpg" alt="item photo">
+                        </div>
+                        <div class="text-container">
+                            <div class="item-title">
+                                <p>CocaCola $3</p>
+                            </div>
+                            <div class="toppings">
+                                <ul>
+                                    <li>Obviously</li>
+
+                                </ul>
+                            </div>
+                            <p class="details">Tap for Details</p>
+                            <a class="order-button hide" href="tel:4035555555">Order</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="headline" class="page-title">
+                    <p>Dessert Menu</p>
+                </div>
+                <div class="page-content">
+
+                    <div id="card-17" class="menu-item">
+                        <div class="menu-image">
+                            <img src="../images/dessert4.jpg" alt="item photo">
+                        </div>
+                        <div class="text-container">
+                            <div class="item-title">
+                                <p>No-Bake Pumkin Cheesecake $7</p>
+                            </div>
+                            <div class="toppings">
+                                <ul>
+                                    <li>Some no,</li>
+                                    <li>some bake,</li>
+                                    <li>lots of pumpkin,</li>
+                                    <li>cheese,</li>
+                                    <li>and some cake that is not cake</li>
+
                                 </ul>
                                 <p class="details">Tap for Details</p>
+                                <a class="order-button hide" href="tel:4035555555">Order</a>
                             </div>
                         </div>
                     </div>
 
+                    <div id="card-18" class="menu-item">
+                        <div class="menu-image">
+                            <img src="../images/dessert1.jpg" alt="item photo">
+                        </div>
+                        <div class="text-container">
+                            <div class="item-title">
+                                <p>Strawberry Cloud $9</p>
+                            </div>
+                            <div class="toppings">
+                                <ul>
+                                    <li>Strawberry,</li>
+                                    <li>Cloud,</li>
+                                    <li>Sulpher Hexa-flouride</li>
+                                </ul>
+                                <p class="details">Tap for Details</p>
+                                <a class="order-button hide" href="tel:4035555555">Order</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="card-19" class="menu-item">
+                        <div class="menu-image">
+                            <img src="../images/dessert2.jpg" alt="item photo">
+                        </div>
+                        <div class="text-container">
+                            <div class="item-title">
+                                <p>Butterscotch Lush $8</p>
+                            </div>
+                            <div class="toppings">
+                                <ul>
+                                    <li>Some Butter,</li>
+                                    <li>Some Scotch,</li>
+                                    <li>Some Lush</li>
+                                </ul>
+                                <p class="details">Tap for Details</p>
+                                <a class="order-button hide" href="tel:4035555555">Order</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="card-20" class="menu-item">
+                        <div class="menu-image">
+                            <img src="../images/dessert3.jpg" alt="item photo">
+                        </div>
+                        <div class="text-container">
+                            <div class="item-title">
+                                <p>Raspberry Cheesecake $6</p>
+                            </div>
+                            <div class="toppings">
+                                <ul>
+                                </ul>
+                                <p class="details">Tap for Details</p>
+                                <a class="order-button hide" href="tel:4035555555">Order</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

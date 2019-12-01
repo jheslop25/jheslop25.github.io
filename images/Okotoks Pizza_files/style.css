@@ -1,27 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Merriweather+Sans&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-}
-
-@-webkit-keyframes card-size {
-  from {
-    height: 20vh;
-  }
-  to {
-    height: 60vh;
-  }
-}
-
-@keyframes card-size {
-  from {
-    height: 20vh;
-  }
-  to {
-    height: 60vh;
-  }
-}
-
+/* define overly complicated @mixin for shits and giggles. 
+felt cute might delete later */
 .nav-link-red {
   color: #9E221A;
   text-align: center;
@@ -42,28 +21,14 @@
   color: white;
 }
 
-.order-button {
-  color: #9E221A;
-  text-align: center;
-  margin: 5px 5px 5px 5px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-size: 1.2rem;
-  text-decoration: none;
-  background-color: white;
-  border-style: solid;
-  border-width: 2px;
-  border-color: #9E221A;
-  border-radius: 35px;
-  padding: 5px 15px 5px 15px;
-}
-
-.order-button:hover {
-  background-color: #9E221A;
-  color: white;
+/* strip away default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
 }
 
 /* define parent grid */
-#parent-container {
+#parent {
   display: -ms-grid;
   display: grid;
   width: 100vw;
@@ -118,151 +83,47 @@
 }
 
 /* define page content grid */
-#background {
-  background-color: #9E221A;
-  width: 100%;
-}
-
-#foreground {
-  border-top-right-radius: 60px;
-  background-color: white;
-  border-bottom-left-radius: 60px;
+#page-content {
+  display: -ms-grid;
+  display: grid;
+  width: 100vw;
+  -ms-grid-rows: minmax(10vh, auto) minmax(10vh, auto) minmax(25vh, auto) minmax(10vh, auto);
+      grid-template-rows: minmax(10vh, auto) minmax(10vh, auto) minmax(25vh, auto) minmax(10vh, auto);
+  -ms-grid-columns: 100vw;
+      grid-template-columns: 100vw;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #F0F0F0;
-  padding-top: 3vh;
-  padding-bottom: 15vh;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 100%;
-      grid-template-columns: 100%;
-  -ms-grid-rows: minmax(10vh, auto) minmax(60vh, auto);
-      grid-template-rows: minmax(10vh, auto) minmax(60vh, auto);
-  justify-items: center;
 }
 
-.page-content {
-  display: -ms-grid;
-  display: grid;
+#page-content #some-text {
+  margin: 0px 15px 0px 15px;
+}
+
+#page-content #headline-container {
+  margin: 15% 15% 0px 15%;
+  text-align: right;
+}
+
+#page-content #headline {
+  font-size: 2.0rem;
+  font-family: "Merriweather Sans", sans-serif;
+}
+
+#page-content #image-container {
+  width: 100vw;
+}
+
+#page-content #background {
+  background-color: #9E221A;
+}
+
+#page-content #about-us-preview {
+  padding-left: 50%;
+  padding-bottom: 5%;
   width: 100%;
-  -ms-grid-columns: (minmax(100px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  -ms-grid-rows: (minmax(15vh, auto))[auto-fill];
-      grid-template-rows: repeat(auto-fill, minmax(15vh, auto));
-  -webkit-column-gap: 25px;
-          column-gap: 25px;
-  row-gap: 25px;
-  justify-items: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 15px;
-}
-
-#overlay {
-  display: none;
-}
-
-/*define styles for menu cards */
-.menu-item {
-  display: -ms-grid;
-  display: grid;
-  width: 80%;
-  height: 20vh;
-  -ms-grid-columns: 50% 50%;
-      grid-template-columns: 50% 50%;
-  background-color: white;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  justify-items: center;
-  padding: 3vw 3vh;
-  border-radius: 5px;
-  -webkit-box-shadow: 5px 3px 10px #D0D0D0;
-          box-shadow: 5px 3px 10px #D0D0D0;
-}
-
-.menu-item p, .menu-item li {
-  color: black;
-  font-family: "Merriweather Sans", sans-serif;
-}
-
-.menu-item li {
-  display: none;
-}
-
-.menu-item .details {
-  font-size: 1.2rem;
-  margin-top: 5px;
-  font-family: "Merriweather Sans", sans-serif;
-}
-
-.menu-item .hide {
-  display: none;
-}
-
-.menu-item img {
-  width: 110px;
-  border-radius: 6px;
-}
-
-.menu-item:hover {
-  -webkit-animation-name: card-size;
-          animation-name: card-size;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
-  width: 80%;
-  margin-top: 0;
-  margin-bottom: 0;
-  z-index: 100000;
-  padding-bottom: 15px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 100%;
-      grid-template-columns: 100%;
-  overflow: hidden;
-  justify-items: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-}
-
-.menu-item:hover li {
-  display: initial;
-  -ms-grid-column-align: center;
-      justify-self: center;
-}
-
-.menu-item:hover ul {
-  margin-bottom: 15px;
-  justify-items: center;
-}
-
-.menu-item:hover .details {
-  display: none;
-}
-
-.menu-item:hover .hide {
-  display: initial;
-  -ms-grid-column-align: center;
-      justify-self: center;
-}
-
-.menu-item:hover img {
-  width: 200px;
-  border-radius: 9px;
-}
-
-.page-title p {
-  font-size: 2.5rem;
-  font-family: "Merriweather Sans", sans-serif;
-}
-
-.item-title {
-  font-size: 1.5rem;
 }
 
 /* define footer */
@@ -304,28 +165,50 @@
     -ms-grid-rows: (minmax(7vh, auto))[4];
         grid-template-rows: repeat(4, minmax(7vh, auto));
   }
+  #page-content {
+    border-top-right-radius: 60px;
+    background-color: white;
+    border-bottom-left-radius: 60px;
+    background-color: #F0F0F0;
+  }
+  #page-content #headline-container p {
+    text-align: left;
+    margin-left: -10vw;
+    margin-bottom: 3%;
+  }
+  #page-content #call-to-action-container {
+    -ms-grid-column-align: start;
+        justify-self: start;
+    margin: 18px;
+  }
   #background {
     background-color: #9E221A;
-  }
-  #background .page-content {
-    margin: 15px;
   }
   #footer {
     border-top-right-radius: 60px;
   }
-  .order-button {
-    color: white;
-    text-align: center;
-    margin: 5px 5px 5px 5px;
+  #about-us-preview p {
+    text-align: right;
+    margin-bottom: 4vh;
     font-family: "Merriweather Sans", sans-serif;
     font-size: 1.2rem;
-    text-decoration: none;
-    background-color: #9E221A;
-    border-style: solid;
-    border-width: 2px;
-    border-color: #9E221A;
-    border-radius: 35px;
-    padding: 5px 15px 5px 15px;
+  }
+  #home-image {
+    width: 150px;
+    position: relative;
+    bottom: 3vh;
+    left: 48vw;
+  }
+  #home-image-three {
+    width: 175px;
+    -webkit-transform: rotate(-27deg);
+            transform: rotate(-27deg);
+    position: relative;
+    left: 5vw;
+    margin-top: 10px;
+  }
+  #home-image-two {
+    display: none;
   }
 }
 
@@ -357,18 +240,56 @@
     display: none;
     visibility: hidden;
   }
-  .page-content {
+  #page-content {
     border-top-right-radius: 60px;
     background-color: white;
     border-bottom-left-radius: 60px;
     background-color: #F0F0F0;
-    margin: 15px;
+  }
+  #page-content #headline-container p {
+    -ms-grid-column-align: start;
+        justify-self: start;
+    text-align: start;
+    margin-left: -11%;
+    margin-bottom: 3%;
+  }
+  #page-content #call-to-action-container {
+    -ms-grid-column-align: start;
+        justify-self: start;
+    margin-left: 7%;
   }
   #background {
     background-color: #9E221A;
   }
   #footer {
     border-top-right-radius: 60px;
+  }
+  #about-us-preview p {
+    text-align: right;
+    margin-bottom: 4vh;
+    font-family: "Merriweather Sans", sans-serif;
+    font-size: 1.1rem;
+    width: 70%;
+    margin-left: 25vw;
+  }
+  #home-image {
+    width: 150px;
+    position: relative;
+    bottom: 3vh;
+    left: 55vw;
+    -webkit-transform: rotate(18deg);
+            transform: rotate(18deg);
+  }
+  #home-image-two {
+    display: none;
+  }
+  #home-image-three {
+    width: 175px;
+    -webkit-transform: rotate(-27deg);
+            transform: rotate(-27deg);
+    position: relative;
+    bottom: 3vh;
+    left: 5vw;
   }
 }
 
@@ -427,25 +348,64 @@
     display: none;
     visibility: hidden;
   }
-  .details {
-    display: none;
-  }
-  .page-content {
+  #page-content {
     border-top-right-radius: 60px;
     background-color: white;
     border-bottom-left-radius: 60px;
     background-color: #F0F0F0;
   }
-  .page-content .menu-item:hover {
-    margin-bottom: -100px;
-    margin-top: 0;
+  #page-content #headline-container {
+    -ms-grid-column-align: start;
+        justify-self: start;
+    text-align: start;
+    margin-left: 7%;
+    margin-top: 7%;
+    margin-bottom: 3%;
+  }
+  #page-content #call-to-action-container {
+    -ms-grid-column-align: start;
+        justify-self: start;
+    margin-left: 7%;
   }
   #background {
     background-color: #9E221A;
-    width: 100vw;
   }
   #footer {
     border-top-right-radius: 60px;
+  }
+  #about-us-preview p {
+    margin-top: 5vh;
+    font-family: "Merriweather Sans", sans-serif;
+    font-size: 1.1rem;
+    width: 50%;
+  }
+  #home-image {
+    width: 300px;
+    position: relative;
+    bottom: 15vh;
+    left: 60vw;
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  #home-image-two {
+    float: left;
+    shape-outside: circle(50%);
+    width: 300px;
+    height: 300px;
+    margin-right: 15px;
+  }
+  #home-image-two img {
+    width: 100%;
+    border-radius: 100%;
+    height: 100%;
+  }
+  #home-image-three {
+    width: 175px;
+    -webkit-transform: rotate(-27deg);
+            transform: rotate(-27deg);
+    position: relative;
+    bottom: 1vh;
+    left: 55vw;
   }
 }
 
@@ -459,27 +419,4 @@
         grid-template-rows: repeat(2, minmax(50%, 1fr));
   }
 }
-
-/* define page-content grid */
-.page-content {
-  display: -ms-grid;
-  display: grid;
-  width: 100%;
-  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  -ms-grid-rows: (minmax(15vh, auto))[auto-fill];
-      grid-template-rows: repeat(auto-fill, minmax(15vh, auto));
-  -webkit-column-gap: 0px;
-          column-gap: 0px;
-  row-gap: 15px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-top-right-radius: 60px;
-  background-color: white;
-  border-bottom-left-radius: 60px;
-  background-color: #F0F0F0;
-}
-
-/*define styles for menu cards */
-/*# sourceMappingURL=menu.css.map */
+/*# sourceMappingURL=style.css.map */

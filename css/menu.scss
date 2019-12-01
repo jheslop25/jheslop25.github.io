@@ -5,6 +5,11 @@
     margin: 0;
     padding: 0;
 }
+@keyframes card-size {
+    from {height: 20vh;}
+    to {height: 60vh;}
+    
+}
 .nav-link-red {
     color: $header-color;
         text-align: center;
@@ -24,7 +29,24 @@
            
         }
 }
-
+.order-button {
+    color: $header-color;
+        text-align: center;
+        margin: 5px 5px 5px 5px;
+        font-family: $primary-font;
+        font-size: 1.2rem;
+        text-decoration: none;
+        background-color: $secondary-text-color;
+        border-style: solid;
+        border-width: 2px;
+        border-color: $header-color;
+        border-radius: 35px;
+        padding: 5px 15px 5px 15px;
+        &:hover {
+            background-color: $header-color;
+            color: $secondary-text-color;
+        }
+}
 
 
 
@@ -98,33 +120,35 @@
     justify-items: center;
 }
 
-#page-content {
+.page-content {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(auto-fill, minmax(px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(15vh, auto));
     column-gap: 25px;
     row-gap: 25px;
     justify-items: center;
     align-items: center;
-    
+    margin: 15px;
     
 }
-
+#overlay {
+    display: none;
+}
 /*define styles for menu cards */
 
 .menu-item {
     display: grid;
-    width: 90%;
-    height: 15vh;
+    width: 80%;
+    height: 20vh;
     grid-template-columns: 50% 50%;
     background-color: white;
     align-items: center;
-    transform: translateY(0px);
-    transition: 700ms;
+    justify-items: center;
     padding: 3vw 3vh;
     border-radius: 5px;
     box-shadow: 5px 3px 10px $shadow-color;
+    
     p, li {
         color: $primary-text-color;
         font-family: $primary-font;
@@ -137,22 +161,53 @@
         margin-top: 5px;
         font-family: $primary-font;
     }
+    .hide {
+        display: none;
+    }
+    img {
+        width: 110px;
+        border-radius: 6px;
+    }
+    
+   
     &:hover {
-        width: 60%;
-        height: 35vh;
-        margin: 15px;
+        animation-name: card-size;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in-out;
+        width: 80%;
+       
+        margin-top: 0;
+        margin-bottom: 0;
+        z-index: 100000;
+        padding-bottom: 15px;
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: repeat(2, minmax(10vh,auto));
+        overflow: hidden;
         justify-items: center;
         align-items: center;
-        transform: translateY(-20px);
+        text-align: center;
         li {
-            display: list-item;
+            
+            display: initial;
+            justify-self: center;
+        }
+        ul {
+            margin-bottom: 15px;
+            justify-items: center;
         }
         .details {
             display: none;
         }
+        .hide {
+            display: initial;
+            justify-self: center;
+        }
+        img {
+            width: 200px;
+            border-radius: 9px;
+        }
+        
     }
 }
 
@@ -161,9 +216,7 @@
     font-family: $primary-font;
 }
 
-.menu-image img {
-    width: 100px;
-}
+ 
 
 .item-title {
     font-size: 1.5rem;
@@ -202,9 +255,26 @@
     
     #background {
         background-color: $header-color;
+        .page-content {
+            margin: 15px;
+        }
     }
     #footer {
         border-top-right-radius: 60px;
+    }
+    .order-button {
+        color: $secondary-text-color;
+        text-align: center;
+        margin: 5px 5px 5px 5px;
+        font-family: $primary-font;
+        font-size: 1.2rem;
+        text-decoration: none;
+        background-color: $header-color;
+        border-style: solid;
+        border-width: 2px;
+        border-color: $header-color;
+        border-radius: 35px;
+        padding: 5px 15px 5px 15px;
     }
    
 
@@ -231,11 +301,12 @@
         display: none;
         visibility: hidden;
     }
-    #page-content {
+    .page-content {
         border-top-right-radius: 60px;
         background-color: white;
         border-bottom-left-radius: 60px;
         background-color: $background-off-white;
+        margin: 15px;
         
         
     }
@@ -296,11 +367,15 @@
     .details {
         display: none;
     }
-    #page-content {
+    .page-content {
         border-top-right-radius: 60px;
         background-color: white;
         border-bottom-left-radius: 60px;
         background-color: $background-off-white;
+        .menu-item:hover {
+            margin-bottom: -100px;
+            margin-top: 0;
+        }
     }
     #background {
         background-color: $header-color;
@@ -321,12 +396,12 @@
 }
 /* define page-content grid */
 
-#page-content {
+.page-content {
     display: grid;
     width: 100%;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(15vh, auto));
-    column-gap: 15px;
+    column-gap: 0px;
     row-gap: 15px;
     align-items: center;
     border-top-right-radius: 60px;

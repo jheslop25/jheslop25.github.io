@@ -1,0 +1,17 @@
+.hover-box {
+    background-color: black;
+    width: 50vw;
+    height: 50vh;
+    .menu-item {
+        width: 40vw;
+        height: 40vh;
+        background-color: white;
+    }
+    &:hover {
+        .menu-item{
+            height: 30vh;
+            width: 30vw;
+            background-color: blue;
+        }
+    }
+}
